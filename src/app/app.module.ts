@@ -15,6 +15,7 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { GithubComponent } from './github/github.component';
 import { CylinderComponent } from './cylinder/cylinder.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CylinderComponent } from './cylinder/cylinder.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,3 +7,22 @@
 * Github: https://github.com/Kdorina/
 * Licenc: GNU GPL
 */ -->
+
+<div class="container">
+    <form [formGroup]="cylinderForm" (submit)="calcButton()">
+       <div class="input mt-3">
+        <label for="radius" class="form-label">Sugár</label>
+        <input type="text" class="form-control" formControlName="radius">
+       </div> 
+       <div class="input mt-3">
+        <label for="length" class="form-label">Hossz</label>
+        <input type="text" class="form-control" formControlName="length">
+       </div> 
+       <div class="d-grid mt-3">
+        <button type="submit" class="btn btn-dark">Számít</button>
+       </div>
+       <div class="output mt-3" *ngIf="show">
+        <input type="text" class="form-control" formControlName="result" readonly>
+       </div>
+    </form>
+</div>
