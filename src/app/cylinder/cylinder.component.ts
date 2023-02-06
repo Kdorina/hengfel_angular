@@ -39,11 +39,8 @@ export class CylinderComponent implements OnInit{
   Calculation(){
     let radius = Number(this.cylinderForm.value.radius);
     let length = Number(this.cylinderForm.value.length);
-    //első opció
-    let result = 2*Math.PI*radius*(radius+length);
-    //masodik opció
-    // let result = 2*Math.PI*Math.pow(radius,2)+2*Math.PI*radius*length;
 
+    let result = 2*Math.PI*radius*(radius+length);
     this.cylinderForm.patchValue({result: result})
   }
 }
