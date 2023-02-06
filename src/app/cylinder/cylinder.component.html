@@ -16,7 +16,7 @@
         <label for="radius" class="form-label">Sugár</label>
         <input type="text" class="form-control" 
         placeholder="Kérek egy értéket.." formControlName="radius">
-        <span *ngIf="cylinderForm.controls['radius'].invalid" style="color:red">
+        <span *ngIf="cylinderForm.controls['radius'].errors?.['required']" style="color:red">
             Sugár értékének megadása kötelező.
         </span>
        </div> 
@@ -25,8 +25,8 @@
         <label for="length" class="form-label">Hossz</label>
         <input type="text" class="form-control" 
         placeholder="Kérek egy értéket.."formControlName="length">
-        <span *ngIf="cylinderForm.controls['length'].invalid" style="color:red">
-            Sugár értékének megadása kötelező.
+        <span *ngIf="cylinderForm.controls['length'].errors?.['required']" style="color:red">
+            Hossz értékének megadása kötelező.
         </span>
        </div> 
 
@@ -35,7 +35,7 @@
        </div>
 
        <div class="output mt-3" *ngIf="show">
-        <input type="text" class="form-control" formControlName="result" readonly>
+        <input type="text" class="result form-control" formControlName="result" readonly>
        </div>
 
     </form>
