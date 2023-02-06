@@ -9,20 +9,34 @@
 */ -->
 
 <div class="container">
-    <form [formGroup]="cylinderForm" (submit)="calcButton()">
+    <h2 class="text-center mt-5">Kör alapú henger felszín számítása</h2>
+    <form class="mt-4" [formGroup]="cylinderForm" (submit)="calcButton()">
+
        <div class="input mt-3">
         <label for="radius" class="form-label">Sugár</label>
-        <input type="text" class="form-control" formControlName="radius">
+        <input type="text" class="form-control" 
+        placeholder="Kérek egy értéket.." formControlName="radius">
+        <span *ngIf="cylinderForm.controls['radius'].invalid" style="color:red">
+            Sugár értékének megadása kötelező.
+        </span>
        </div> 
+
        <div class="input mt-3">
         <label for="length" class="form-label">Hossz</label>
-        <input type="text" class="form-control" formControlName="length">
+        <input type="text" class="form-control" 
+        placeholder="Kérek egy értéket.."formControlName="length">
+        <span *ngIf="cylinderForm.controls['length'].invalid" style="color:red">
+            Sugár értékének megadása kötelező.
+        </span>
        </div> 
+
        <div class="d-grid mt-3">
         <button type="submit" class="btn btn-dark">Számít</button>
        </div>
+
        <div class="output mt-3" *ngIf="show">
         <input type="text" class="form-control" formControlName="result" readonly>
        </div>
+
     </form>
 </div>

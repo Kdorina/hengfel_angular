@@ -7,3 +7,15 @@
 * Github: https://github.com/Kdorina/
 * Licenc: GNU GPL
 */
+
+.card{
+    padding: 20px;
+    background: linear-gradient(45deg, #e6f3ff, #dfffd1);
+    border: none;
+}
+.card:hover{
+    transform: translateY(-1px);
+    background: linear-gradient(45deg, #d0e8ff, #e0ffba);
+    box-shadow: 0px 0px 10px #0000003e;
+   
+}

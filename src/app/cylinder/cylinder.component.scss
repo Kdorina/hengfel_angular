@@ -7,3 +7,28 @@
 * Github: https://github.com/Kdorina/
 * Licenc: GNU GPL
 */
+
+form{
+
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+                inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+                5px 5px 5px rgba(0, 0, 0,0.05),
+                -5px -5px 5px rgba(255, 255, 255, 0.5);
+}
+label{
+    font-weight: 600;
+}
+button{
+    background: linear-gradient(45deg, #e6f3ff, #dfffd1);
+    color: black;
+    border: none;
+    font-weight: 500;
+}
+button:hover{
+    background: linear-gradient(45deg, #c0e1ff, #d4ff9f);
+    color: black;
+    border: none;
+}

@@ -10,7 +10,7 @@
 
 
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cylinder',
@@ -25,8 +25,8 @@ export class CylinderComponent implements OnInit{
 
   ngOnInit(): void {
   this.cylinderForm = this.formBuilder.group({
-    radius:[''],
-    length:[],
+    radius:['', Validators.required],
+    length:['', Validators.required],
     result:['']
   })
   }
